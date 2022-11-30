@@ -27,6 +27,6 @@
 1. `진행상황`  
   CC 홈 화면 제작까지
 3. `기타사항`
-- 프론트엔드 오픈소스 툴킷 `**Bootstrap**` 사용
-- https://gitprojectcc.nounsongnes.repl.co/
+  - 프론트엔드 오픈소스 툴킷 `**Bootstrap**` 사용
+  - https://gitprojectcc.nounsongnes.repl.co/
 
