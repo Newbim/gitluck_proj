@@ -24,9 +24,9 @@
 ![image](https://user-images.githubusercontent.com/113091447/204788396-ec2d77f4-06c9-47be-8998-ab9fe10b52a0.png)
 
 
-1. `진행상황`  
-  CC 홈 화면 제작까지
-3. `기타사항`
+1. `진행상황`  CC 홈 화면 제작까지
+  
+2. `기타사항`
   - 프론트엔드 오픈소스 툴킷 `**Bootstrap**` 사용
   - https://gitprojectcc.nounsongnes.repl.co/
 
