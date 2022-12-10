@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>CampusContests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/classStyle.css">  
+  </head>
+<body>  
+  <div class="job">
+   
+    <div class="header">
+      <div class="logo">
+    
+        <a href="/">
+        <img src = "https://cdn-icons-png.flaticon.com/512/8084/8084145.png" style="margin-right: 5px; width:31.8667px; height:31.8667px;"></img>
+        </a>
+    
+        <a href="/" class="text-decoration-none">CampusContests</a>
+      </div>
+     
+      <div class="user-settings">
+        <div class="dark-light">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+        </div>
+
+
+        
+        <div class="user-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-square">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+          </svg>
+        </div>
+        <img
+          class="user-profile"
+          src="https://hywiki.s3.amazonaws.com/7/7a/%ED%95%98%EB%83%A5%EC%9D%B4_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%9C%B5%ED%95%A9%EB%8C%80%ED%95%99.png"
+          alt=""
+        ></img>
+        <div class="user-name">Git Luck Team</div>
+      </div>
+    </div>
+    <div class="wrapper">
+            <form action="/search" method="get">
+      <div class="search-menu">
+        <div class="search-bar">
+        <input name="q" type="text" placeholder= "검색어를 입력하세요." class="search-box" autofocus></input>
+    </div>
+    <div class="search-location">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      Korea
+    </div>
+    <div class="search-location">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+      <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
+      ALL
+    </div>
+    <button class="search-button" onclick="location.href='/search'">Find Contests</button>
+  </div>
+      </form>
+      <div class="container-menu">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="/" class="nav-link">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a href="/classAll" class="nav-link active" aria-current="page">ALL</a>
+      </li>
+      <li class="nav-item">
+        <a href="/classSeoul" class="nav-link">SEOUL</a>
+      </li>
+      <li class="nav-item">
+        <a href="/classErica" class="nav-link">ERICA</a>
+      </li>
+    </ul>
+  </div>
+      <div class="main-container"> 
+    <div class="searched-jobs">
+      <div class="searched-bar">
+        <div class="searched-show">Showing {{pagination.total}} Contests</div>
+        <div class="searched-sort">Sort by: <span class="post-time">Contests for a year</span><span class="menu-icon">▼</span></div>
+      </div>
+
+
+
+      
+     
+        
+          
+      <!--   페이지 및 카드   -->
+      <div class="job-cards">
+    {% for user in users %}
+      <!-- card1 -->
+      {% if (user < page_num) %}
+      <div class="job-card">
+        <div class="job-card-header">
+          <g fill="#feb0a5">
+            <path d="M256 92.5l127.7 91.6L512 92 383.7 0 256 91.5 128.3 0 0 92l128.3 92zm0 0M256 275.9l-127.7-91.5L0 276.4l128.3 92L256 277l127.7 91.5 128.3-92-128.3-92zm0 0"></path>
+            <path d="M127.7 394.1l128.4 92 128.3-92-128.3-92zm0 0"></path>
+          </g>
+          <path d="M512 92L383.7 0 256 91.5v1l127.7 91.6zm0 0M512 276.4l-128.3-92L256 275.9v1l127.7 91.5zm0 0M256 486.1l128.4-92-128.3-92zm0 0" fill="#feb0a5"></path>
+        <div class="menu-dot"></div>
+        </div>
+
+        
+      <div class="job-card-title">{{contests[user].title}}</div>
+      <div class="job-card-subtitle"></div>
+        <div class="job-detail-buttons">
+          <button class="search-buttons detail-button">{{contests[user].campus_class}}</button>
+          <button class="search-buttons detail-button">{{contests[user].dDay}}</button>
+        </div>
+        <div class="job-card-buttons">
+          <button class="search-buttons card-buttons" onclick="location.href='{{contests[user].homepagelink}}'">Go Homepage</button>
+          <button class="search-buttons card-buttons-msg" onclick="location.href='{{contests[user].imagelink}}'">View Image</button>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}         
+    </div>
+        <div class = "paginations">
+    {{pagination.links}}
+        </div>
+        </div>
+  </div>
+    </div>
+  </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script type="text/javascript" src="../static/js/classScript.js"></script> 
+
+</body>
+</html>
