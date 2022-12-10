@@ -48,18 +48,43 @@ CampusContests Web 프로젝트는,
 
 
 
-## 2. 설치
+## 2. 설치 및 사용
+   - **Visual Studio Code 에서 실행**
+     1) 설치
+     
+        1. 터미널 | `pip install flask` 입력
+        
+        2. 터미널 | `pip install flask_paginate` 입력
+        
+        3. 터미널 | `pip install requests` 입력
+        
+        4. 터미널 | `pip install bs4` 입력
+        
+        5. 터미널 | `pip install waitress` 입력
+     2) 실행
+     
+        1. 터미널 | `python main.py` 입력
+        
+        2. 웹브라우저 | `localhost:8080` 입력 
+        
+   - **Replit에서 실행**
+      ```
+      Replit에서 실행할 경우, 설치사항이 없습니다. 
+      ```
+      1) 실행
+      
+         `Run` 클릭
 
-  - `main.py` 
-  - `cc_scrapper.py` `exporter.py`
-  - `static` 디렉토리
-  - `templates` 디렉토리
 
+## 3. 라이선스
 
+- 프론트엔드 오픈소스 툴킷 **`Bootstrap`** 사용
 
-1. `진행상황`  CC 홈 화면 제작까지
-  
-2. `기타사항`
-  - 프론트엔드 오픈소스 툴킷 **`Bootstrap`** 사용
-  - https://gitprojectcc.nounsongnes.repl.co/
-
+- 프론트엔드 오픈소스 커뮤니티 **`Codepen`** 에서, Job Search Platform UI 사용
+  ```
+  Copyright (c) 2022 Aysenur Turk (https://codepen.io/TurkAysenur/pen/jOqdNbm)
+  ```
+- ContestCampus 라이선스
+  ```
+  Copyright (c) 2022 Gitluck Team
+  ```
