@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CampusContests</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/homeStyle.css">  
+
+
+    
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="job">
+      <div class="header">
+        <div class="logo">
+          
+          <img src = "https://cdn-icons-png.flaticon.com/512/8084/8084145.png" style="margin-right: 5px; width:31.8667px; height:31.8667px;"> </img>
+          CampusContests
+        </div>
+      <div class="user-settings">
+        <div class="dark-light">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+        </div>
+        <div class="user-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-square">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" /></svg>
+        </div>
+        <img
+          class="user-profile"
+          src="https://hywiki.s3.amazonaws.com/7/7a/%ED%95%98%EB%83%A5%EC%9D%B4_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%9C%B5%ED%95%A9%EB%8C%80%ED%95%99.png"
+          alt=""></img>
+        <div class="user-name">Git Luck Team</div>
+      </div>
+      </div>
+      <div class="wrapper">
+        <div class="wrapper-title">
+          <img src = "https://cdn-icons-png.flaticon.com/512/8084/8084145.png"></img>
+          <div class="wrapper-hidden">CampusContests</div>
+        </div>
+    
+        <div class="wrapper-sentence">
+          <div style="width: 420px; text-align: center">
+            <p>한양대학교 학생들을 위한 모든 공모전, CC</p>
+          </div>
+        </div>
+        <form action="/search" method="get">
+          <div class="search-menu">
+            <div class="search-bar">
+              <input
+                name="q"
+                type="text"
+                placeholder="검색어를 입력하세요."
+                class="search-box"
+                autofocus
+              ></input>
+            </div>
+            <div class="search-location">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-map-pin"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Korea
+            </div>
+    
+            <button class="search-button" onclick="location.href='/search'"; return false;>Find Contests</button>
+          </div>
+        </form>
+    
+        <div class="container-menu">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="/" class="nav-link active" aria-current="page">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="/classAll" class="nav-link">ALL</a>
+            </li>
+            <li class="nav-item">
+              <a href="/classSeoul" class="nav-link">SEOUL</a>
+            </li>
+            <li class="nav-item">
+              <a href="/classErica" class="nav-link">ERICA</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/classScript.js"></script> 
+  </body>
+</html>
