@@ -66,14 +66,29 @@ CampusContests Web 프로젝트는,
         1. 터미널 | `python main.py` 입력
         
         2. 웹브라우저 | `localhost:8080` 입력 
+     3) 실행 시 공모전 내용이 안뜨는 오류가 발생할 경우
+     
+        
+        1. 파일삭제 | `ccdata.csv` 가 생성되어 있는 경우 삭제
+        
+        2. vscode 설정 | 
+        
+           (1) `설정(Ctrl + , or 톱니바퀴)` 
+           
+           (2) `encoding 검색` 
+           
+           (3) `default` : UTF-8
+           
+           (4) `Auto Guess Encoding` : 빈 체크박스 클릭 
+        
+       
+  <br>
         
    - **Replit에서 실행**
       ```
       Replit에서 실행할 경우, 설치사항이 없습니다. 
+      실행시, Run 버튼을 클릭하면 됩니다.
       ```
-      1) 실행
-      
-         `Run` 클릭
   <br>
 
 ## 3. 라이선스
