@@ -58,15 +58,11 @@ def parse_day(year, month, days):
 
 
 def calculate_ymd(period):
-  # 2022.11.18~2022.11.24
   if "~" in period:
     dDay = period.split("~")[1]
     year, month, day = list(map(int, dDay.split(".")))
     today = datetime.today()
     today_year, today_month, today_day = today.year, today.month, today.day
-    # print(year, month, day)
-    # print("===========================")
-    # print(today_year, today_month, today_day)
     return parse_day(year, month, day) - parse_day(today_year, today_month,
                                                    today_day)
   else:
@@ -86,7 +82,6 @@ def extract_contest(html, url):
   datas = soup.find("td", {"class": "view-title"})
   data_list = datas.get_text().replace(" ", "").split()
   title = data_list[0]
-  # campus = ""
 
   for idx in range(len(data_list)):
     if "공지기간" in data_list[idx]:
@@ -97,7 +92,6 @@ def extract_contest(html, url):
       campus = data_list[idx + 1]
 
   dDay = calculate_ymd(event_period)
-  # print(f"========dDay는 {dDay}")
   str_dDay = ""
   if dDay is None:
     str_dDay = f"D-?"
@@ -109,9 +103,7 @@ def extract_contest(html, url):
     str_dDay = "D-Day"
   else:
     str_dDay = f"D-{dDay}"
-  # datas_link_html = soup.find("td", {"class":"view-script"})
-  # data_list = datas.get_text().replace(" ", "").split()
-  # imagelink = f"https://www.hanyang.ac.kr"
+
 
   try:
     image_link_element = soup.find("img", {"alt": ""})["src"]
@@ -125,8 +117,6 @@ def extract_contest(html, url):
   return {
     "title": title,
     "dDay": str_dDay,
-    # "notice_period": notice_period,
-    # "event_period": event_period,
     "campus_class": campus,
     "homepagelink": element_link,
     "imagelink": image_link
@@ -175,7 +165,6 @@ def extract_contests(last_page, url):
         if contest is None:
           return contests
         contests.append(contest)
-        # print(contest)
   return contests
 
 
