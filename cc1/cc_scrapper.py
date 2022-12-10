@@ -127,7 +127,7 @@ def extract_contest(html, url):
 
 def isContest(html):
   title = html.find("a").get_text()
-  if ("공모전" in title) or ("대회" in title) or ("대전" in title):
+  if ("공모전" in title) or ("대회" in title) or ("대전" in title) or ("콘테스트" in title):
     return True
   return False
 
