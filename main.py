@@ -1,13 +1,3 @@
-"""
-These are the URLs that will give you remote jobs for the word 'python'
-
-https://kr.indeed.com/jobs?q=python
-https://weworkremotely.com/remote-jobs/search?term=python
-https://remoteok.io/remote-dev+python-jobs
-
-Good luck!
-"""
-
 from flask import Flask, render_template, request, redirect, send_file
 from cc_scrapper import cc_get_contests_keyword
 from cc_scrapper import cc_get_contests
